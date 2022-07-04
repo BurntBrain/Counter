@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br>
+    <center><h1 id="counterDisplay">Counter: 0</h1></center>
+    <Center><button id="upButton" type="button">Up</button><button id="downButton" type="button">Down</button></Center>
+    <br>
+    <center><h1>Add or Subtract</h1><input id="doIn" type="text"></center>
+    <br>
+    <center><button id="doIt">Do it!</button></center>
+    <script>   
+        var counter = 0;
+
+        upButton.addEventListener("click", function(){
+            counter++;
+            document.getElementById("counterDisplay").textContent="Counter: " + counter;
+        });
+
+        downButton.addEventListener("click", function(){
+            counter--;
+            document.getElementById("counterDisplay").textContent="Counter: " + counter;
+        });
+        
+        doIt.addEventListener("click", function(){
+            counter = counter + parseInt(document.getElementById("doIn").value);
+            document.getElementById("counterDisplay").textContent="Counter: " + counter;
+        });    
+    </script>
+</body>
+</html>
