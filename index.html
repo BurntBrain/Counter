@@ -29,9 +29,13 @@
         });
         
         doIt.addEventListener("click", function(){
-            counter = counter + parseInt(document.getElementById("doIn").value);
+            var inputVal = document.getElementById("doIn").value;
+            if (!isNaN(inputVal)) {
+                counter = counter + parseFloat(inputVal);
+                inputVal = 0;
+            }
             document.getElementById("counterDisplay").textContent="Counter: " + counter;
-        });    
+        });   
     </script>
 </body>
 </html>
